@@ -6,8 +6,8 @@ import org.junit.Test;
 
 public class SortTest {
 
-    private static final Integer[] INPUT_DATA = {5, 2, 4, 6, 1, 3};
-    private static final Integer[] EXPECTED_RESULT = {1, 2, 3, 4, 5, 6};
+    private static final Integer[] INPUT_DATA = {5, 2, 4, 5, 6, 1, 3};
+    private static final Integer[] EXPECTED_RESULT = {1, 2, 3, 4, 5, 5, 6};
     private Sorting sort;
 
     @Test
