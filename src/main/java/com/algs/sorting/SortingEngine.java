@@ -1,4 +1,4 @@
-package com.sorting;
+package com.algs.sorting;
 
 public class SortingEngine {
     public static final int ISERTION_SORT = 1;

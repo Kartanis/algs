@@ -1,6 +1,4 @@
-package com.sorting;
-
-import java.util.Comparator;
+package com.algs.sorting;
 
 public class InsertionSort extends Sorting {
 
@@ -20,11 +18,17 @@ public class InsertionSort extends Sorting {
         return data;
     }
 
-    private <T extends Comparable> void moveArray(T[] data, int indexOfCurrentElement, int indexOfComparingElement) {
-        int movinIndex = indexOfCurrentElement;
-        while (indexOfComparingElement < movinIndex) {
-            swap(data, movinIndex, movinIndex - 1);
-            movinIndex--;
+    /**
+     * Move current element to the left until it reach comparing element index
+     *
+     * @param data
+     * @param sourceIndex
+     * @param destinationIndex
+     * @param <T>
+     */
+    private <T extends Comparable> void moveArray(T[] data, int sourceIndex, int destinationIndex) {
+        for (int index = sourceIndex; index > destinationIndex; index--) {
+            swap(data, index, index - 1);
         }
     }
 
@@ -34,8 +38,4 @@ public class InsertionSort extends Sorting {
         data[indexOfPreviousElement] = tmp;
     }
 
-    @Override
-    public <T> T sort(T[] data, Comparator<T> comparator) {
-        return null;
-    }
 }
